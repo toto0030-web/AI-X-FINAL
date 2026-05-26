@@ -392,7 +392,7 @@ export default function App() {
               className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold py-2.5 px-4 transition flex items-center justify-center gap-1.5 self-start sm:self-auto"
             >
               <Plus className="w-4 h-4" />
-              <span>내 보유 티켓 양도 등록하기</span>
+              <span>내 보유 티켓 등록하기</span>
             </button>
           </div>
 

@@ -290,7 +290,7 @@ export default function AntiScalpConsultant({ systemInstruction = "You are an ex
           className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition mt-4 shadow-lg shadow-emerald-950/20 flex items-center justify-center gap-1.5"
         >
           <Search className="w-4 h-4 text-emerald-250" />
-          <span>위험 즉시 분석 의뢰</span>
+          <span>위험 분석 의뢰</span>
         </button>
       </div>
 
