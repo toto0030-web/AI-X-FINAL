@@ -1,0 +1,8 @@
+{
+  "name": "Play Ground",
+  "description": "An interactive playground for exploring Gemini models, managing session archives, and tweaking system configurations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
