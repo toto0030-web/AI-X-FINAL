@@ -96,7 +96,7 @@ export default function VerificationModal({ isOpen, onClose, onVerifyComplete, c
         <div className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white px-6 py-5 flex items-center gap-3">
           <ShieldCheck className="w-6 h-6 shrink-0 text-emerald-100" />
           <div>
-            <h3 className="font-bold text-lg leading-tight">페어플레이 암표차단 인증</h3>
+            <h3 className="font-bold text-lg leading-tight">클린 티켓 암표차단 인증</h3>
             <p className="text-xs text-emerald-100/80">실명인증 + 계좌 연동을 통한 다회 및 매크로 계정 원천 차단</p>
           </div>
         </div>
@@ -310,7 +310,7 @@ export default function VerificationModal({ isOpen, onClose, onVerifyComplete, c
               </div>
 
               <div>
-                <h4 className="font-bold text-xl text-slate-800">페어플레이 암표방지 지장 획득!</h4>
+                <h4 className="font-bold text-xl text-slate-800">클린 티켓 암표방지 지장 획득!</h4>
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed">
                   인증 완료일자: {new Date().toLocaleDateString()}<br />
                   네트워크 상생 규정 및 1인 계정 다회 매크로 제재 준수 동의

@@ -51,7 +51,7 @@ export default function App() {
 
   // Initial Logs
   useEffect(() => {
-    addLog('페어플레이 KBO 건강한 양도 플랫폼 상생 엔진 작동 시작', 'info');
+    addLog('클린 티켓 KBO 건강한 양도 플랫폼 상생 엔진 작동 시작', 'info');
     addLog('더치트(The Cheat) 실시간 1초 연동 API 연동 경로 확인 완료', 'info');
     addLog('탄력적 상한제 자동 백엔드 제한 수식 적재 완료 (+10% ~ +20% 구역제한)', 'success');
   }, []);
@@ -160,7 +160,7 @@ export default function App() {
                 <Ticket className="w-5 h-5" />
               </div>
               <div>
-                <h1 className="text-base font-extrabold tracking-tight text-slate-900 leading-none font-display">페어플레이 볼 (FairPlay Ball)</h1>
+                <h1 className="text-base font-extrabold tracking-tight text-slate-900 leading-none font-display">클린 티켓 (Clean Ticket)</h1>
                 <p className="text-[10px] text-slate-500 font-bold mt-0.5">KBO 암표 근절 상생 양도 플랫폼</p>
               </div>
             </div>
@@ -218,11 +218,11 @@ export default function App() {
               공익 추구형 상생 플랫폼
             </span>
             <h2 className="text-2xl md:text-3.5xl font-extrabold leading-tight tracking-tight font-display text-white">
-              전문 암표상들의 마진을 완벽 봉쇄하여 <br className="hidden md:inline" />
-              야구장 문화를 상생으로 바로잡습니다.
+              암표 없는 야구장, <br className="hidden md:inline" />
+              팬들이 만드는 새로운 문화
             </h2>
             <p className="text-xs md:text-sm text-emerald-100/90 leading-relaxed font-semibold">
-              원가 양도는 상인 경쟁을 극대화하지 못합니다. 상생 마켓은 <strong>KBO 정가에 탄력적 상한폭(+10%~+20%)만 허용</strong>하며, 실명계좌 연동, 본인인증, 에스크로 실시간 QR을 도입하여 업자의 차익 폭리를 비활성화해 스스로 떠나게 유도합니다.
+              전문 암표상이 수익을 낼 수 없는 구조, <strong>우리는 기술로 야구 팬들의 권리를 안전하게 보호합니다.</strong> KBO 정가에 합리적인 상한폭(+10%~+20%)만 두어 차익 폭리를 비활성화하고, 실시간 안전 에스크로 장치로 건강한 거래의 장을 엽니다.
             </p>
           </div>
 

@@ -121,7 +121,7 @@ export default function EscrowStepTracker({ activeListing, onConfirmEntry, onCan
               에스크로 보호 안내 (D+0 신속 정산)
             </p>
             <p>
-              현재 결제대금 <strong>{activeListing.askingPrice.toLocaleString()}원</strong>은 플랫폼의 에스크로 안전 가상 금고에 완벽하게 락업되어 있습니다. 해당 금액은 관람객의 물리적 입장이 확인되는 즉시 판매자에게 안전 정산 전달됩니다. 이로서 위조 먹튀가 원천 봉쇄됩니다.
+              현재 결제대금 <strong>{activeListing.askingPrice.toLocaleString()}원</strong>은 플랫폼의 에스크로 안전 가상 금고에 완벽하게 락업되어 있습니다. 해당 금액은 관람객의 물리적 입장이 확인되는 즉시 판매자에게 안전 정산 전달됩니다.
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
-  "name": "Play Ground",
-  "description": "An interactive playground for exploring Gemini models, managing session archives, and tweaking system configurations.",
+  "name": "클린 티켓",
+  "description": "암표 없는 야구장, 지능화된 에스크로 시스템 기반의 공정한 KBO 야구 티켓 양도 플랫폼",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
