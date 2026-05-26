@@ -1,1 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Noto Sans KR", sans-serif;
+  --font-sans: "Noto Sans KR", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom Animations */
+  --animate-fade-in: fade-in 0.4s ease-out;
+  --animate-slide-up: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-right: slide-right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-scan: scan 1.8s ease-in-out infinite;
+  --animate-float: float-animation 4s ease-in-out infinite;
+  --animate-border-glow: border-glow 3s infinite linear;
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slide-right {
+    from { opacity: 0; transform: translateX(-12px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes scan {
+    0% { top: 0%; opacity: 0.3; }
+    50% { top: 100%; opacity: 1; }
+    100% { top: 0%; opacity: 0.3; }
+  }
+  @keyframes float-animation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes border-glow {
+    0%, 100% { border-color: rgba(16, 185, 129, 0.3); }
+    50% { border-color: rgba(16, 185, 129, 0.8); }
+  }
+}
+
+/* Custom Base Tweaks */
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+}
+
+/* Glass & Neon Premium Utilities */
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(241, 245, 249, 0.8);
+}
+
+@utility glass-card-dark {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+@utility neon-glow {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+
+@utility neon-glow-rose {
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.25);
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Dynamic Entrance Keying */
+.anim-fade-in {
+  animation: var(--animate-fade-in);
+}
+
+.anim-slide-up {
+  animation: var(--animate-slide-up);
+}
+
+.anim-float {
+  animation: var(--animate-float);
+}
+
+/* Sports Stadium Visual Accent */
+.stadium-grid {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}

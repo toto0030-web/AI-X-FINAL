@@ -152,8 +152,8 @@ export default function EscrowStepTracker({ activeListing, onConfirmEntry, onCan
                     />
                   ))}
                 </div>
-                {/* Visual sweeping overlay */}
-                <div className="absolute inset-x-0 h-0.5 bg-emerald-500 shadow-md shadow-emerald-500 animate-bounce top-0" />
+                {/* Visual sweeping overlay with laser-glow utility */}
+                <div className="absolute inset-x-0 h-1 bg-emerald-500 shadow-[0_0_10px_#10b981,_0_0_18px_#10b981] animate-scan top-0" />
               </div>
               
               <div className="flex items-center gap-1.5 bg-slate-50 px-2.5 py-1 rounded-md text-[10px] font-mono border border-slate-100 text-slate-700">

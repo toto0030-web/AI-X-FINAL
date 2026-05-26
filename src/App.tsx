@@ -148,28 +148,28 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased selection:bg-emerald-100 pb-16">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased selection:bg-emerald-100 pb-16 anim-fade-in">
       
       {/* Top Header Section */}
-      <header className="sticky top-0 z-40 bg-white border-b border-slate-200/80 backdrop-blur-md bg-opacity-95">
+      <header className="sticky top-0 z-40 bg-white/90 border-b border-slate-200/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             
-            {/* Title logo branding */}
+            {/* Title logo branding with modern tracking font */}
             <div className="flex items-center gap-3">
-              <div className="bg-emerald-600 p-2 rounded-xl text-white shadow-md shadow-emerald-700/10 flex items-center justify-center">
+              <div className="bg-emerald-600 p-2 rounded-xl text-white shadow-md shadow-emerald-700/10 flex items-center justify-center anim-float">
                 <Ticket className="w-5 h-5" />
               </div>
               <div>
-                <h1 className="text-base font-extrabold tracking-tight text-slate-900 leading-none">페어플레이 볼 (FairPlay Ball)</h1>
+                <h1 className="text-base font-extrabold tracking-tight text-slate-900 leading-none font-display">페어플레이 볼 (FairPlay Ball)</h1>
                 <p className="text-[10px] text-slate-500 font-bold mt-0.5">KBO 암표 근절 상생 양도 플랫폼</p>
               </div>
             </div>
 
-            {/* Authenticated user pill at right */}
+            {/* Authenticated user pill at right with live neon glow indicators */}
             <div className="flex items-center gap-3">
               {verification.isVerified ? (
-                <div className="bg-emerald-50 border border-emerald-100 rounded-full py-1.5 px-3.5 flex items-center gap-2 text-xs">
+                <div className="bg-emerald-50/80 border border-emerald-200 rounded-full py-1.5 px-3.5 flex items-center gap-2 text-xs neon-glow transition-all duration-300">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -181,7 +181,7 @@ export default function App() {
                 <button
                   type="button"
                   onClick={() => setIsVerifyOpen(true)}
-                  className="bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-bold py-2 px-4 transition flex items-center gap-1.5 shadow-md shadow-slate-900/10"
+                  className="bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-bold py-2 px-4 transition-all hover:scale-105 duration-300 active:scale-95 flex items-center gap-1.5 shadow-md shadow-slate-900/10"
                 >
                   <Smartphone className="w-3.5 h-3.5" />
                   <span>실명 & 본인인증하기</span>
@@ -196,19 +196,19 @@ export default function App() {
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-8">
         
-        {/* Pitch Hero Intro Banner */}
-        <div id="hero-banner" className="bg-gradient-to-r from-emerald-800 via-teal-900 to-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden">
+        {/* Pitch Hero Intro Banner with stadium grid texture & rich background */}
+        <div id="hero-banner" className="bg-gradient-to-br from-emerald-800 via-teal-950 to-slate-950 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden stadium-grid hover:shadow-emerald-900/10 transition-shadow duration-500">
           {/* Subtle ball field vector lines approximation */}
-          <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none translate-x-12 translate-y-12">
-            <div className="w-80 h-80 rounded-full border-[20px] border-white" />
-            <div className="w-96 h-96 rounded-full border-[10px] border-white -translate-x-12 -translate-y-12" />
+          <div className="absolute right-0 bottom-0 opacity-15 pointer-events-none translate-x-12 translate-y-12">
+            <div className="w-80 h-80 rounded-full border-[20px] border-emerald-500/20" />
+            <div className="w-96 h-96 rounded-full border-[10px] border-emerald-400/15 -translate-x-12 -translate-y-12" />
           </div>
 
           <div className="max-w-2xl space-y-4 relative z-10">
-            <span className="text-[10px] bg-emerald-500/20 text-emerald-300 font-extrabold uppercase py-1 px-3 border border-emerald-500/30 rounded-full tracking-wider">
+            <span className="inline-block text-[10px] bg-emerald-500/20 text-emerald-300 font-extrabold uppercase py-1.5 px-3 border border-emerald-500/30 rounded-full tracking-wider anim-float">
               공익 추구형 상생 플랫폼
             </span>
-            <h2 className="text-2xl md:text-3.5xl font-extrabold leading-tight tracking-tight">
+            <h2 className="text-2xl md:text-3.5xl font-extrabold leading-tight tracking-tight font-display">
               전문 암표상들의 마진을 완벽 봉쇄하여 <br className="hidden md:inline" />
               야구장 문화를 상생으로 바로잡습니다.
             </h2>
@@ -435,13 +435,13 @@ export default function App() {
                 return (
                   <div
                     key={ticket.id}
-                    className={`bg-white rounded-2xl border transition duration-300 ${
+                    className={`bg-white rounded-2xl border transition-all duration-300 transform ${
                       ticket.status === 'escrow'
-                        ? 'border-emerald-500/40 bg-emerald-50/10'
+                        ? 'border-emerald-500/40 bg-emerald-50/5 hover:shadow-emerald-100/50 scale-[1.005]'
                         : ticket.status === 'completed'
                           ? 'border-slate-200 opacity-65 bg-slate-50'
-                          : 'border-slate-100 hover:border-slate-200 hover:shadow-md'
-                    } flex flex-col justify-between overflow-hidden`}
+                          : 'border-slate-100 hover:border-emerald-500/30 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.015]'
+                    } flex flex-col justify-between overflow-hidden shadow-sm`}
                   >
                     {/* Top Panel card header */}
                     <div className="p-5 border-b border-slate-100/60 space-y-3">
