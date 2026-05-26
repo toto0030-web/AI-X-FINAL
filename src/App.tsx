@@ -28,6 +28,7 @@ import CreateListingModal from './components/CreateListingModal';
 import EscrowStepTracker from './components/EscrowStepTracker';
 import AntiScalpConsultant from './components/AntiScalpConsultant';
 import SimulationLogs from './components/SimulationLogs';
+import InteractiveBaseballSwing from './components/InteractiveBaseballSwing';
 
 export default function App() {
   // Global States
@@ -196,41 +197,56 @@ export default function App() {
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-8">
         
-        {/* Pitch Hero Intro Banner with stadium grid texture & rich background */}
-        <div id="hero-banner" className="bg-gradient-to-br from-emerald-800 via-teal-950 to-slate-950 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden stadium-grid hover:shadow-emerald-900/10 transition-shadow duration-500">
-          {/* Subtle ball field vector lines approximation */}
-          <div className="absolute right-0 bottom-0 opacity-15 pointer-events-none translate-x-12 translate-y-12">
-            <div className="w-80 h-80 rounded-full border-[20px] border-emerald-500/20" />
-            <div className="w-96 h-96 rounded-full border-[10px] border-emerald-400/15 -translate-x-12 -translate-y-12" />
-          </div>
+        {/* Pitch Hero Intro Grid Layout - Vibrant and Animated */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          
+          {/* Left Column: Slogan Banner with high-contrast stadium aesthetics */}
+          <div id="hero-banner" className="lg:col-span-7 bg-emerald-950 bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-950 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden hover:shadow-emerald-900/30 transition-all duration-500 flex flex-col justify-between">
+            {/* Stadium Grid Overlay */}
+            <div className="absolute inset-0 stadium-grid pointer-events-none opacity-40 z-0" />
 
-          <div className="max-w-2xl space-y-4 relative z-10">
-            <span className="inline-block text-[10px] bg-emerald-500/20 text-emerald-300 font-extrabold uppercase py-1.5 px-3 border border-emerald-500/30 rounded-full tracking-wider anim-float">
-              공익 추구형 상생 플랫폼
-            </span>
-            <h2 className="text-2xl md:text-3.5xl font-extrabold leading-tight tracking-tight font-display">
-              전문 암표상들의 마진을 완벽 봉쇄하여 <br className="hidden md:inline" />
-              야구장 문화를 상생으로 바로잡습니다.
-            </h2>
-            <p className="text-xs md:text-sm text-slate-300 leading-relaxed max-w-xl">
-              원가 양도는 상인 경쟁을 극대화하지 못합니다. 상생 마켓은 <strong>KBO 정가에 탄력적 상한폭(+10%~+20%)만 허용</strong>하며, 실명계좌 연동, 본인인증, 에스크로 실시간 QR을 도입하여 업자의 차익 폭리를 비활성화해 스스로 떠나게 유도합니다.
-            </p>
-            
-            <div className="flex flex-wrap gap-2 pt-2 text-[11px] font-bold">
-              <span className="bg-white/10 px-3 py-1.5 rounded-lg border border-white/15">
+            {/* Subtle ball field vector lines approximation */}
+            <div className="absolute right-0 bottom-0 opacity-20 pointer-events-none translate-x-12 translate-y-12">
+              <div className="w-80 h-80 rounded-full border-[18px] border-emerald-400/25" />
+              <div className="w-96 h-96 rounded-full border-[10px] border-emerald-300/15 -translate-x-12 -translate-y-12" />
+            </div>
+
+            <div className="space-y-4 relative z-10">
+              <span className="inline-block text-[10px] bg-emerald-500/30 text-emerald-100 font-extrabold uppercase py-1.5 px-3.5 border border-emerald-400/35 rounded-full tracking-wider anim-float">
+                공익 추구형 상생 플랫폼
+              </span>
+              <h2 className="text-2xl md:text-3.5xl font-extrabold leading-tight tracking-tight font-display text-white">
+                전문 암표상들의 마진을 완벽 봉쇄하여 <br className="hidden md:inline" />
+                야구장 문화를 상생으로 바로잡습니다.
+              </h2>
+              <p className="text-xs md:text-sm text-emerald-100/90 leading-relaxed max-w-xl font-medium">
+                원가 양도는 상인 경쟁을 극대화하지 못합니다. 상생 마켓은 <strong>KBO 정가에 탄력적 상한폭(+10%~+20%)만 허용</strong>하며, 실명계좌 연동, 본인인증, 에스크로 실시간 QR을 도입하여 업자의 차익 폭리를 비활성화해 스스로 떠나게 유도합니다.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-4 text-[10px] font-bold relative z-10">
+              <span className="bg-white/10 px-2.5 py-1.5 rounded-lg border border-white/15">
                 🚫 매크로·다계정 차단
               </span>
-              <span className="bg-white/10 px-3 py-1.5 rounded-lg border border-white/15">
-                📈 탄력적 가격 상한제 (+10%~+20%)
+              <span className="bg-white/10 px-2.5 py-1.5 rounded-lg border border-white/15">
+                📈 탄력 가격 상한제 (+10%~+20%)
               </span>
-              <span className="bg-white/10 px-3 py-1.5 rounded-lg border border-white/15">
+              <span className="bg-white/10 px-2.5 py-1.5 rounded-lg border border-white/15">
                 🔒 재판매 원천 비활성화
               </span>
-              <span className="bg-white/10 px-3 py-1.5 rounded-lg border border-white/15">
-                🤝 캡처 불가능 동적 QR 에스크로
+              <span className="bg-white/10 px-2.5 py-1.5 rounded-lg border border-white/15">
+                🤝 에스크로 동적 QR
               </span>
             </div>
           </div>
+
+          {/* Right Column: Custom Interactive Baseball Swing Sandbox Game! */}
+          <div className="lg:col-span-5 flex">
+            <div className="w-full h-full flex flex-col">
+              <InteractiveBaseballSwing />
+            </div>
+          </div>
+
         </div>
 
         {/* 4 Pillars Interactive Dashboard Cards */}

@@ -44,30 +44,30 @@
 /* Custom Base Tweaks */
 body {
   font-family: var(--font-sans);
-  background-color: #f8fafc;
+  background-color: #edfcf4; /* Fresh, bright green-stadium undertone - vibrant & high end */
 }
 
 /* Glass & Neon Premium Utilities */
 @utility glass-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(241, 245, 249, 0.8);
+  border: 1px solid rgba(16, 185, 129, 0.15);
 }
 
 @utility glass-card-dark {
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(11, 37, 26, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(51, 65, 85, 0.5);
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
 @utility neon-glow {
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.35);
 }
 
 @utility neon-glow-rose {
-  box-shadow: 0 0 15px rgba(244, 63, 94, 0.25);
+  box-shadow: 0 0 18px rgba(244, 63, 94, 0.35);
 }
 
 @utility scrollbar-none {
@@ -77,7 +77,7 @@ body {
   }
 }
 
-/* Dynamic Entrance Keying */
+/* Dynamic Entrance Keying & Interactive Baseball Animations */
 .anim-fade-in {
   animation: var(--animate-fade-in);
 }
@@ -90,8 +90,23 @@ body {
   animation: var(--animate-float);
 }
 
+/* Spinning Baseball Seams Effect */
+.baseball-spin {
+  animation: bg-spin 1.5s linear infinite;
+}
+
+@keyframes bg-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Swing visual trail */
+.swing-trail {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.4) 0%, transparent 100%);
+}
+
 /* Sports Stadium Visual Accent */
 .stadium-grid {
-  background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1.5px, transparent 1.5px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(16, 185, 129, 0.18) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
 }
